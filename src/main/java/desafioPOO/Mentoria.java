@@ -1,43 +1,33 @@
 package desafioPOO;
 
-public class Mentoria {
-    private String titulo;
-    private String descricao;
-    private int cargaHoraria;
+import java.time.LocalDate;
+
+public class Mentoria extends Conteudo{
+
+    private LocalDate data;
 
     public Mentoria() {
     }
 
-    public String getTitulo() {
-        return titulo;
+    @Override
+    public double calcularXP() {
+        return XP_PADRAO + 20d;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public LocalDate getData() {
+        return data;
     }
 
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public int getCargaHoraria() {
-        return cargaHoraria;
-    }
-
-    public void setCargaHoraria(int cargaHoraria) {
-        this.cargaHoraria = cargaHoraria;
+    public void setData(LocalDate data) {
+        this.data = data;
     }
 
     @Override
     public String toString() {
         return "Mentoria{" +
-                "titulo='" + titulo + '\'' +
-                ", descricao='" + descricao + '\'' +
-                ", cargaHoraria=" + cargaHoraria +
+                "titulo='" + super.getTitulo() + '\'' +
+                ", descricao='" + super.getDescricao() + '\'' +
+                ", Data=" + this.data +
                 '}';
     }
 }

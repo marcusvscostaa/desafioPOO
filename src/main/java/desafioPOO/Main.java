@@ -1,5 +1,7 @@
 package desafioPOO;
 
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args){
         Curso curso = new Curso();
@@ -19,7 +21,7 @@ public class Main {
         Mentoria mentoria = new Mentoria();
         mentoria.setTitulo("mentoria JavaScript");
         mentoria.setDescricao("mentoria em JavaScript");
-        mentoria.setCargaHoraria(15);
+        mentoria.setData(LocalDate.now());
         System.out.println(mentoria);
 
 
